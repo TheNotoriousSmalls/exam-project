@@ -6,21 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Den Lille Gule Kaffebar</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
-    <header>Header is here</header>
-    <nav>Navigation is here</nav>
+    <header>
+      <div class="logo">
+        <img src="#" alt="logo" id="#" />
+      </div>
 
-    <main></main>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="#">Menu</a>
+          <a href="about.html">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <span class="menu-button" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <main>
+      <div class="color-box"></div>
+    </main>
 
     <template>
-      <h1 id="about-section-heading">heading here</h1>
-      <p id="about-section-paragraph">paragraph here</p>
-      <img src="#" alt="" id="about-image" />
+      <section id="content-container">
+        <h1 id="about-section-heading">heading here</h1>
+        <p id="about-section-paragraph">paragraph here</p>
+
+        <img src="#" alt="" id="about-image" />
+      </section>
     </template>
 
-    <footer>Footer is here</footer>
+    <footer>
+      <img src="#" alt="Facebook icon" />
+      <img src="#" alt="Instagram icon" />
+    </footer>
 
     <script src="script/script.js"></script>
   </body>
