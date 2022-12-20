@@ -148,6 +148,7 @@ main {
   background-color: var(--copenhagen-green);
   padding: 50px;
   color: var(--little-yellow);
+  min-width: 0;
 }
 
 #section-heading {
@@ -162,8 +163,9 @@ main {
   border-bottom: 1px solid var(--little-yellow);
 }
 
-img {
+#menu-img {
   max-width: 100%;
+  width: 100%;
 }
 
 #color-box {
