@@ -39,27 +39,19 @@ header {
   align-content: center;
   background-color: #024442;
   border-bottom: 1px solid var(--little-yellow);
-  /* border-top: 1px solid var(--little-yellow); */
 }
 
-/* .logo {
-  left: 0;
-  top: 0;
-  width: 5vw;
-  height: 5vh;
-  margin: 20px;
-} */
-
-.header-heading {
+.header-heading a {
   color: var(--little-yellow);
   font-family: var(--modern-love);
-  font-size: 3vh;
+  font-size: 5vh;
   margin: 30px;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-.menu-button {
-  font-size: 3vh;
+.nav-button {
+  font-size: 5vh;
   cursor: pointer;
   background-color: var(--copenhagen-green);
   color: var(--little-yellow);
@@ -110,20 +102,6 @@ header {
   font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
-  .overlay {
-    overflow-y: auto;
-  }
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
 /* End Navigation */
 
 /* Main content */
@@ -131,7 +109,7 @@ header {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #logo-container {
@@ -141,7 +119,7 @@ main {
   justify-content: center;
   align-items: center;
   grid-column: 4 / span 6;
-  grid-row: 3 / span 4;
+  grid-row: 2 / span 4;
 }
 
 #menu-button {
@@ -151,8 +129,8 @@ main {
   padding: 15px 30px;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
-  width: 15vw;
+  display: inline-block;
+  width: 20vw;
   font-size: 1rem;
   border-radius: 20px;
 }
@@ -162,26 +140,24 @@ main {
   color: var(--white);
 }
 
-#about-content-container {
+#content-container {
   grid-column: 4 / span 5;
   grid-row: 3 / span 4;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-content: center; */
   background-color: var(--copenhagen-green);
   padding: 50px;
-  /* box-shadow: 5px 5px var(--white); */
   color: var(--little-yellow);
 }
 
-#about-section-heading {
+#section-heading {
   font-family: var(--modern-love);
   border-bottom: 1px solid var(--little-yellow);
 }
 
-#about-section-paragraph {
+#section-paragraph {
   font-family: var(--open-sans);
+  text-align: center;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--little-yellow);
 }
@@ -190,7 +166,6 @@ main {
   grid-column: 7 / span 3;
   grid-row: 2 / span 6;
   background-color: var(--little-yellow);
-  /* box-shadow: 5px 5px var(--white); */
 }
 
 /* End main content */
@@ -215,3 +190,82 @@ footer img {
 }
 
 /* End footer */
+
+/* Media queries */
+
+@media screen and (max-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .overlay {
+    overflow-y: auto;
+  }
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
+  .header-heading a {
+    color: var(--little-yellow);
+    font-family: var(--modern-love);
+    font-size: 2vh;
+    margin: 20px;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .nav-button {
+    font-size: 2vh;
+    cursor: pointer;
+    background-color: var(--copenhagen-green);
+    color: var(--little-yellow);
+    margin: 20px;
+    padding: 10px;
+  }
+
+  #menu-button {
+    background-color: var(--copenhagen-green);
+    border: 1px solid var(--little-yellow);
+    color: var(--little-yellow);
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    width: 25vw;
+    font-size: 0.8rem;
+    border-radius: 20px;
+  }
+
+  #logo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / span 6;
+    grid-row: 2 / span 4;
+  }
+
+  #content-container {
+    grid-column: 2 / span 4;
+    grid-row: 3 / span 4;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--copenhagen-green);
+    padding: 50px;
+    color: var(--little-yellow);
+  }
+
+  #color-box {
+    grid-column: 5 / span 3;
+    grid-row: 2 / span 6;
+    background-color: var(--little-yellow);
+  }
+}
