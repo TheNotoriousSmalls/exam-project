@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", init);
+
 const url = "https://keammd21-15ab.restdb.io/rest/menu-section";
 const options = {
     headers: {
@@ -20,6 +22,10 @@ fetch(url, options)
         //Log error
         console.error("An error occured:", e.message);
     });
+
+function init() {
+    handleData()
+};
 
 function handleData(data) {
     data.forEach((element) => {
