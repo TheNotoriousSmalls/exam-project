@@ -125,6 +125,7 @@ main {
 #menu-button {
   background-color: var(--copenhagen-green);
   border: 1px solid var(--little-yellow);
+  font-family: var(--open-sans);
   color: var(--little-yellow);
   padding: 15px 30px;
   text-align: center;
@@ -239,6 +240,7 @@ footer img {
   #menu-button {
     background-color: var(--copenhagen-green);
     border: 1px solid var(--little-yellow);
+    font-family: var(--open-sans);
     color: var(--little-yellow);
     padding: 15px 30px;
     text-align: center;
